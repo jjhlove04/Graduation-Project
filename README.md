@@ -8,7 +8,8 @@
 ## Description
 
  ```
- It is a project where you can feel the fun of growth and grow yourself by watching the process of making this game.
+ It is a project where you can feel the fun of growth and grow 
+ yourself by watching the process of making this game.
  ```
  
 ## Create Note
