@@ -18,6 +18,7 @@
  <a href ="https://padlet.com/tm2p6z2k2q/xl4090f3e6ndn0aw">
   <img src="https://user-images.githubusercontent.com/74443267/170165598-5c881a9a-2188-4174-969f-fd3d4d46fb98.png">
  <a>
-</p>
-
+</p
+<hr/>
+  
 📄 [22.06.08 작업일지](https://jinhyocoding.tistory.com/51)
