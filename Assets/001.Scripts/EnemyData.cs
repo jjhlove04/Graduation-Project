@@ -6,9 +6,11 @@ using UnityEngine;
 public class EnemyData : ScriptableObject
 {
     public List<EnemyStatusData> _enemyList = new List<EnemyStatusData>();
+    
     [System.Serializable]
     public class EnemyStatusData
     {
+        public GameObject _enemy;
         public float _enemyHp;
         public float _enemyATK;
         public int _dropGlod;

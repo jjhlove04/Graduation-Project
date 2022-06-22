@@ -4,22 +4,21 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float _playerHp;
-    public float _playerMp;
-    public float _playerAD;
-    public float _playerAP;
+    float _playerHp;
+    float _playerMp;
+    float _playerAD;
+    float _playerAP;
     private Animator _playerAnimator;
     
     [SerializeField] LayerMask _playerDetectedLayer;
     private void Awake()
     {
-        
+        playerInit();
     }
     void Start()
     {
 
     }
-
 
     void Update()
     {
@@ -33,5 +32,14 @@ public class Player : MonoBehaviour
         {
             Debug.Log(hitInfo.transform.name);
         }
+    }
+
+    //플레이어 정보 입력
+    void playerInit()
+    {
+        _playerHp = DataManager._instance.playerHp;
+        _playerMp = DataManager._instance.playerMp;
+        _playerAD = DataManager._instance.playerAD;
+        _playerAP = DataManager._instance.playerAP;
     }
 }

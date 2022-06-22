@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7934b7717ce354db89d17f4342676323, type: 3}
-  m_Name: EnemyData
+  m_Script: {fileID: 11500000, guid: d6a8d5152c40a4dbd974a9a7be0693f6, type: 3}
+  m_Name: SkillData
   m_EditorClassIdentifier: 
-  _enemyList:
-  - _enemyHp: 0
-    _enemyATK: 0
-    _dropGlod: 0
-    _dropEXP: 0
-    _enemyType: 0
+  _skillList:
+  - _skill: {fileID: 0}
+    _skillName: Fire_Ball
+    _skillDamage: 120
+    _skillLevel: 1
+    _skillPrice: 5
