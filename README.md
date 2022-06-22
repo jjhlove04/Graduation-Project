@@ -24,4 +24,6 @@
 <hr/>
   
 📄 [22.06.08 작업일지](https://jinhyocoding.tistory.com/51)  
-📄 [22.06.15 작업일지](https://jinhyocoding.tistory.com/53)
+📄 [22.06.15 작업일지](https://jinhyocoding.tistory.com/53)  
+📄 [22.06.22 작업일지](https://jinhyocoding.tistory.com/54)  
+  
