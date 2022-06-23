@@ -16,6 +16,10 @@ public class DataManager : MonoBehaviour
         public float playerAD;
         [Tooltip("플레이어 마법공격력")]
         public float playerAP;
+        [Tooltip("플레이어 경험치 드롭률")]
+        public float playerDropExp;
+        [Tooltip("플레이어 골드 드롭률")]
+        public float playerDropGold;
 
     private void Awake() {
         _instance = this;

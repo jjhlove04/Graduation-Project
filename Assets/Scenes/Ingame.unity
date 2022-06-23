@@ -3712,6 +3712,8 @@ MonoBehaviour:
   playerMp: 50
   playerAD: 10
   playerAP: 14
+  playerDropExp: 5
+  playerDropGold: 5
 --- !u!4 &479212986
 Transform:
   m_ObjectHideFlags: 0
