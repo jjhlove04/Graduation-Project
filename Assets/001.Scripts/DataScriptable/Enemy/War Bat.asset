@@ -10,12 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7934b7717ce354db89d17f4342676323, type: 3}
-  m_Name: EnemyData
+  m_Name: War Bat
   m_EditorClassIdentifier: 
-  _enemyList:
-  - _enemyHp: 20
-    _enemyATK: 5
-    _dropGlod: 17
-    _dropEXP: 27
-    _enemyType: 1
-  _enemy: {fileID: 0}
+  _enemyHp: 12
+  _enemyHpInc: 4.4
+  _enemyAtk: 4
+  _enemyAtkInc: 2.7
+  _enemyDef: 4
+  _enemyDefInc: 3
+  _dropGlod: 14
+  _dropGlodInc: 5
+  _dropEXP: 20
+  _dropEXPInc: 19
+  _enemyTypes: 1
