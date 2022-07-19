@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ca4cd60265684a51b3930648c277676, type: 3}
+  m_Name: Sunny
+  m_EditorClassIdentifier: 
+  _playerHP: 100
+  _playerHpInc: 10
+  _playerMP: 50
+  _playerMpInc: 15
+  _playerAtk: 10
+  _playerAtkInc: 2
+  _playerAp: 14
+  _playerApInc: 4
+  _playerDef: 6
+  _playerDefInc: 1
+  _dropGlod: 5
+  _dropGlodInc: 0.5
+  _dropEXP: 5
+  _dropEXPInc: 0.5

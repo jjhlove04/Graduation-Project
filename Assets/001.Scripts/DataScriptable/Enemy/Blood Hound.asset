@@ -12,15 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7934b7717ce354db89d17f4342676323, type: 3}
   m_Name: Blood Hound
   m_EditorClassIdentifier: 
-  _enemy: {fileID: 0}
-  _enemyHp: 0
-  _enemyHpInc: 0
-  _enemyAtk: 0
-  _enemyAtkInc: 0
-  _enemyDef: 0
-  _enemyDefInc: 0
-  _dropGlod: 0
-  _dropGlodInc: 0
-  _dropEXP: 0
-  _dropEXPInc: 0
-  _enemyType: 0
+  _enemyHp: 31
+  _enemyHpInc: 5.7
+  _enemyAtk: 11
+  _enemyAtkInc: 4.6
+  _enemyDef: 7
+  _enemyDefInc: 5
+  _dropGlod: 21
+  _dropGlodInc: 9
+  _dropEXP: 43
+  _dropEXPInc: 32
+  _enemyTypes: 1

@@ -12,15 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7934b7717ce354db89d17f4342676323, type: 3}
   m_Name: Battle Golem
   m_EditorClassIdentifier: 
-  _enemy: {fileID: 0}
-  _enemyHp: 0
-  _enemyHpInc: 0
-  _enemyAtk: 0
-  _enemyAtkInc: 0
-  _enemyDef: 0
-  _enemyDefInc: 0
-  _dropGlod: 0
-  _dropGlodInc: 0
-  _dropEXP: 0
-  _dropEXPInc: 0
-  _enemyType: 0
+  _enemyHp: 109
+  _enemyHpInc: 10.7
+  _enemyAtk: 34
+  _enemyAtkInc: 8.2
+  _enemyDef: 21
+  _enemyDefInc: 12
+  _dropGlod: 56
+  _dropGlodInc: 22
+  _dropEXP: 127
+  _dropEXPInc: 98
+  _enemyTypes: 0

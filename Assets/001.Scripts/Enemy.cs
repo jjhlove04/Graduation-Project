@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : LivingEntity
 {
     private float enemyHp;
     private float enemyAtk;
@@ -13,23 +13,25 @@ public class Enemy : MonoBehaviour
     public EnemyData _enemyData;
     public EnemyData EnemyData {set { _enemyData = value;}}
 
+    public enum EnemyState{
+        Idle,
+        Attack,
+        Damaged,
+        Death
+    }
+
+    EnemyState enemyState;
     private void Awake() {
         EnemyInit();
     }
-    private void Update() {
-        if(Input.GetKeyDown(KeyCode.A))
-        {
-            EnemtUpGrade();
-        }
-        if(Input.GetKeyDown(KeyCode.B))
-        {
-            Debug.Log("체력 : " + enemyHp);
-            Debug.Log("공격력 : " +enemyAtk);
-            Debug.Log("방어력 : " +enemyDef);
-            Debug.Log("드롭골드 : " +dropGold);
-            Debug.Log("드롭경험치 : " +dropExp);
-        }
+
+    private  void Start() {
+        StageManager._instance.onNextStage.AddListener(EnemyUpGrade);
     }
+    private void Update() {
+
+    }
+    ///<summary> 적 스탯 부여 함수 </summary>
     public void EnemyInit()
     {
         enemyHp = _enemyData.EnemyHp;
@@ -40,7 +42,8 @@ public class Enemy : MonoBehaviour
         
     }
 
-    public void EnemtUpGrade()
+    ///<summary> 적 업그레이드 실행 </summary>
+    public void EnemyUpGrade()
     {
         enemyHp += _enemyData.EnemyHpInc;
         enemyHp = Mathf.Round(enemyHp*10) * 0.1f;
@@ -49,8 +52,19 @@ public class Enemy : MonoBehaviour
         enemyDef += _enemyData.EnemyDefInc;
         dropGold += _enemyData.DropGoldInc;
         dropExp += _enemyData.DropExpInc;
+
+        //스탯 오른거 확인
+        Debug.Log("체력 : " + enemyHp);
+        Debug.Log("공격력 : " +enemyAtk);
+        Debug.Log("방어력 : " +enemyDef);
+        Debug.Log("드롭골드 : " +dropGold);
+        Debug.Log("드롭경험치 : " +dropExp);
         
-
     }
-
+    ///<summary> 적 스택 부여 함수 </summary>
+    public void Die(){
+        StageManager._instance.CheckEnemyCount();
+        gameObject.SetActive(false);
+    }
+    
 }
