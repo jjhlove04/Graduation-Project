@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class DataManager : MonoBehaviour
 {
+    
     public static DataManager _instance = new DataManager();
-
-    public float _inputPlayerHp;
+    Player _playerInfo;
+    public float _inputPlayerMp;
+    public float _inputPlayerAd;
   private void Awake() {
     _instance = this;
   }
     private void Start() {
-      
+        
     }
 }

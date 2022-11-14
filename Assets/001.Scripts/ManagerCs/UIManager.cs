@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIManager : MonoBehaviour
+public class UiManager : MonoBehaviour
 {   
     Player _playerInfo;
 
-    public static UIManager _instance = new UIManager();
+    public static UiManager _instance = new UiManager();
 
     [Header("상단 UI 관련 패널")]
     public Text _goldText;
@@ -49,6 +49,12 @@ public class UIManager : MonoBehaviour
     public Slider _playerHpBar;
     public Slider _playerMpBar;
     public Slider _playerExpBar;
+
+    //UI 관련
+    
+    
+
+
     private void Awake() {
         _instance = this;
         _playerInfo = FindObjectOfType<Player>();
@@ -77,13 +83,9 @@ public class UIManager : MonoBehaviour
 
     public void UIInit()
     {
-        
-        float hp = _playerInfo.playerHp;
-        float mp = _playerInfo.playerMp;
-        float ad = _playerInfo.playerAd;
-        _upGradeHpText.text = $"Hp 증가 {hp} -> <color=#A64B2A>{hp + 5}</color>";
-        _upGradeMpText.text = $"Mp 증가 {mp} -> <color=#A64B2A>{mp + 5}</color>";
-        _upGradeADText.text = $"AD 증가 {ad} -> <color=#A64B2A>{ad + 2}</color>";
+        _upGradeHpText.text = $"Hp 증가 {_playerInfo.playerHp} -> <color=#A64B2A>{_playerInfo.playerHp + _playerInfo._playerData.PlayerHpInc}</color>";
+        _upGradeMpText.text = $"Mp 증가 {_playerInfo.playerMp} -> <color=#A64B2A>{_playerInfo.playerMp + _playerInfo._playerData.PlayerMpInc}</color>";
+        _upGradeADText.text = $"AD 증가 {_playerInfo.playerAd} -> <color=#A64B2A>{_playerInfo.playerAd + _playerInfo._playerData.PlayerAtkInc}</color>";
     }
 
     public void UPGRADE(int index)
@@ -94,6 +96,7 @@ public class UIManager : MonoBehaviour
             _playerInfo.UPHP();
             _hpUpPrice = Mathf.RoundToInt(_hpUpPrice * 1.2f);
             _upGradePrices[0].text = $"{_hpUpPrice}";
+            _upGradeHpText.text = $"AD 증가 {_playerInfo.playerHp} -> <color=#A64B2A>{_playerInfo.playerHp + _playerInfo._playerData.PlayerHpInc}</color>";
             Debug.Log(_hpUpPrice);
             
             }  
@@ -102,6 +105,7 @@ public class UIManager : MonoBehaviour
             {
                 _playerInfo.UPMP();
                 _mpUpPrice = Mathf.RoundToInt(_mpUpPrice * 1.2f);
+                _upGradeHpText.text = $"AD 증가 {_playerInfo.playerAd} -> <color=#A64B2A>{_playerInfo.playerAd + _playerInfo._playerData.PlayerAtkInc}</color>";
                 _upGradePrices[1].text = $"{_mpUpPrice}";
             }
             //평타 공격력 업그레이드
@@ -111,6 +115,25 @@ public class UIManager : MonoBehaviour
                 _adUpPrice = Mathf.RoundToInt(_adUpPrice * 1.2f);
                 _upGradePrices[2].text = $"{_adUpPrice}";
             }
-        
+            //마법 공격력 업그레이드
+            if(index == 3)
+            {
+                _playerInfo.UPAP();
+                _apUpPrice = Mathf.RoundToInt(_apUpPrice * 1.2f);
+                _upGradePrices[3].text = $"{_apUpPrice}";
+            }
+            //플레이어 경험치 업그레이드
+            if(index == 4)
+            {
+                _playerInfo.UPEXP();
+                _expUpPrice = Mathf.RoundToInt(_expUpPrice * 1.2f);
+                _upGradePrices[4].text = $"{_expUpPrice}";
+            }
+            if(index == 5)
+            {
+             
+            }
+
     }
+    
 }
